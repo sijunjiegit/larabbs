@@ -32,5 +32,8 @@ $api->version('v1', [
         // 获取验证码
         $api->post('Captchases', 'CaptchasController@store')
             ->name('api.users.store');
+
+        $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
+            ->name('api.socials.authorizations.store');
     });
 });
